@@ -1,3 +1,6 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import { Hono } from "hono";
 import { serve } from "@hono/node-server";
 import { serveStatic } from "@hono/node-server/serve-static";
@@ -8,7 +11,6 @@ import fs from "node:fs";
 import { getWeather } from "./api.js";
 import { generate } from "./llm.js";
 
-require('dotenv').config();
 
 
 const app = new Hono();
