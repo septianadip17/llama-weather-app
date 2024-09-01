@@ -8,6 +8,9 @@ import fs from "node:fs";
 import { getWeather } from "./api.js";
 import { generate } from "./llm.js";
 
+require('dotenv').config();
+
+
 const app = new Hono();
 
 app.use("/img/*", serveStatic({ root: "./" }));
